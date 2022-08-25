@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mail_message_inherited_view">
+            <field name="name">mail.message.inherit.tree.view</field>
+            <field name="model">mail.message</field>
+            <field name="inherit_id" ref="mail.view_message_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace"></xpath>
+                <xpath expr="//field[@name='subject']" position="replace"></xpath>
+                <xpath expr="//field[@name='model']" position="replace"></xpath>
+                <xpath expr="//field[@name='res_id']" position="replace"></xpath>
+                <xpath expr="//field[@name='author_id']" position="before">
+                    <field name="body"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

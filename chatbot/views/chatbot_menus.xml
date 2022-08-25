@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.actions.act_window" id="chatbot_data_action">
+        <field name="name">Load Custom Data</field>
+        <field name="res_model">chatbot.data</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Custom Data For Your Chatbot
+            </p>
+            <p>
+                In order to train a customized chatbot,
+                it needs to be fed with custom data consisting of
+                sample user inputs, required bot response and test cases.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="chatbot_story_action">
+        <field name="name">Add Chatbot Story</field>
+        <field name="res_model">chatbot.story</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Custom Chatbot Story
+            </p>
+            <p>
+                Story is a way of helping the bot understand the context
+                of a given chat instance. With the help of chatbot stories,
+                the bot can predict the replies and stay within the context
+                of the conversation.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="chatbot_load_action">
+        <field name="name">Train Chatbot On Custom Data</field>
+        <field name="res_model">chatbot.load</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Train Your Custom Chatbot
+            </p>
+            <p>
+                The custom chatbot needs to custom data to be loaded
+                and then it trains on it. Once the training is completed,
+                the trained model is then loaded into the support chat.
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem name="Custom Chatbot"
+              id="chatbot_menu"
+              sequence="1"
+              web_icon="chatbot,static/description/icon.png" />
+    <menuitem id="chatbot_create_data"
+              name="Load Data"
+              parent="chatbot_menu"
+              sequence="2" />
+    <menuitem id="chatbot_load_data"
+            name="Train Bot"
+            parent="chatbot_menu"
+            sequence="3"
+            action="chatbot_load_action" />
+    <menuitem id="chatbot_custom_data"
+            name="Custom Messages"
+            parent="chatbot_create_data"
+            sequence="3"
+            action="chatbot_data_action" />
+    <menuitem id="chatbot_custom_story"
+            name="Custom Stories"
+            parent="chatbot_create_data"
+            sequence="4"
+            action="chatbot_story_action" />
+</odoo>

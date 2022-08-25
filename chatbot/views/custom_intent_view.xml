@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="custom_intent_view_form">
+            <field name="name">custom.intent.form</field>
+            <field name="model">custom.intent</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="custom_intent_view_list">
+            <field name="name">custom.intent.list</field>
+            <field name="model">custom.intent</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="custom_intent_view_search">
+            <field name="name">custom.intent.search</field>
+            <field name="model">custom.intent</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="custom_intent_view_pivot">
+            <field name="name">custom.intent.pivot</field>
+            <field name="model">custom.intent</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="name" />
+                </pivot>
+            </field>
+        </record>
+    </data>    
+</odoo>

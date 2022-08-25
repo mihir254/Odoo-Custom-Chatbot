@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="res.partner" id="custom_bot">
+            <field name="name">Custom Bot</field>
+            <field name="display_name">Custom Bot</field>
+            <field name="image_1920" type="base64" file="chatbot/static/description/icon.png"/>
+        </record>
+    </data>
+</odoo>

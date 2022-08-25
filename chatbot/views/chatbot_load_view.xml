@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="chatbot_load_view_form">
+            <field name="name">chatbot.load.form</field>
+            <field name="model">chatbot.load</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button class="btn-primary" name="onChatbotLoadData" type="object" string="Load Custom Data" attrs="{'invisible': [('is_data_loaded', '=', True)]}" />
+                        <button class="btn-primary" name="onChatbotTrain" type="object" string="Train Chatbot" attrs="{'invisible': ['|', ('is_data_loaded', '=', False), ('is_model_trained', '=', True)]}" />
+                        <button class="btn-primary" name="onChatbotModelLoad" type="object" string="Load Trained Model" attrs="{'invisible': ['|', ('is_model_trained', '=', False), ('is_model_loaded', '=', True)]}" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="desc" />
+                            <field name="is_data_loaded" invisible="1"/>
+                            <field name="is_model_trained" invisible="1"/>
+                            <field name="is_model_loaded" invisible="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="chatbot_load_view_list">
+            <field name="name">chatbot.chatbot.load.list</field>
+            <field name="model">chatbot.load</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="create_date" />
+                    <field name="model_file_name" />
+                    <field name="is_model_loaded" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="chatbot_load_view_search">
+            <field name="name">chatbot.chatbot.load.search</field>
+            <field name="model">chatbot.load</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                    <field name="create_date" />
+                    <field name="model_file_name" />
+                    <field name="is_model_loaded" />
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="chatbot_load_view_pivot">
+            <field name="name">chatbot.chatbot.load.pivot</field>
+            <field name="model">chatbot.load</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="name" />
+                    <field name="create_date" />
+                    <field name="model_file_name" />
+                    <field name="is_model_loaded" />
+                </pivot>
+            </field>
+        </record>
+    </data>    
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_chatbot_data,bot.admin,model_chatbot_data,,1,1,1,1
+access_chatbot_story,bot.admin,model_chatbot_story,,1,1,1,1
+access_chatbot_load,bot.admin,model_chatbot_load,,1,1,1,1
+access_custom_intent,bot.admin,model_custom_intent,,1,1,1,1
