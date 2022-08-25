@@ -8,7 +8,7 @@ The main purpose behind developing the customizable chatbot is to speed up the c
 Along with that, we added modifications and customizations for the chatbot, making it completely flexible for any use case.
 We have made use of an open source machine learning framework called RASA, to develop the chatbot. In order to customize the chatbot data,
 we are reading from and writing to .yml files using python.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/1.openModule.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/1.openModule.gif)
 ## 2. Technologies
 - Python - Built custom module to enable customization of the chatbot and allow users to configure the chatbot
 - JavaScript - Used to integrate the chatbot with the already existing Website and Discuss module
@@ -29,7 +29,7 @@ After analyzing, we realized that RASA offers the most suitable, easy-to-underst
 understands user intents (input), generates required outputs (responses), and learns from a bunch of intent-response pairs (stories).
 We can also define a Rule for the bot to adhere to. Besides the current implementation, RASA provides a bunch of other APIs which can help us scale the bot if required.
 Therefore, we have used the RASA framework for our chatbot development.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/15.RasaServer.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/15.RasaServer.gif)
 ## 5. Features
 ### a. Deliverables
 | Objectives|Description|Status|
@@ -39,34 +39,34 @@ Therefore, we have used the RASA framework for our chatbot development.
 |Allow humans to jump in and replace the bot as needed|The chatbot allows a human representative / operator to interfere and jump in the conversation wherever required. The bot will bring in the operator on customer request as well|:heavy_check_mark:|
 ### b. Custom Module
 - Load New Data: The chatbot learns from the data that it is provided. Our module allows the user to create new data values and load them to the chatbot's training files.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/2.CreateIntent.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/2.CreateIntent.gif)
 - Load Data from previous logs: In addition to creating new data, the chatbot can also be loaded with the data from session histories.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/4.PreviousSession.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/4.PreviousSession.gif)
 - Create Custom stories: Stories help the chatbot understand the flow of the conversation and help the bot predict the next response. We can create customized stories
 and give a direction to the conversation.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/6.Story.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/6.Story.gif)
 - Train Chatbot Models: Once we have loaded data into the chatbot, we can train the chatbot on the loaded data. Here, we make an API call to the /model/train and the
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/9.TrainBot.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/9.TrainBot.gif)
 trained model is saved in the /models folder in the RASA directory.
 - Switch between trained models: If we have multiple models trained and we need to use a previously trained model or if we need to switch back to the latest model,
 we can simply click on the model name and load it.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/10.switchModel.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/10.switchModel.gif)
 - Configure chatbot setup: The user can host the chatbot wherever required and for that purpose, we have created a configuration where the user can give information
 about the server URL, port and the RASA directory.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/11.Config.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/11.Config.gif)
 ### c. Chat Window
 - Chatbot Support: The chatbot will welcome any customer who is in need of support or assistance and try to resolve their issue.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/13.connectOperator.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/13.connectOperator.gif)
 - Can call for an Operator: The customer can call for a live operator at any point during the conversation with the chatbot.
 - Operator Can Jump In: An operator can jump in at any moment and continue the chat from there.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/14.OperatorConnected.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/14.OperatorConnected.gif)
 ## 7. Integration
 For integrating our chatbot with Odoo, we have created a new module in Odoo and inherited the existing Livechat module. We made necessary changes to the Python,
 Javascript and XML files while working on this project. We have used the HTTP API to interact with a running Rasa Open Source server.
 With the API, we can train models, send messages, run tests, and more.
 ## 8. Performance
 The bot gives an appropriate response to the user query. Thus, the bot is capable of resolving most of the queries which are asked by the user. The bot also redirects to a customer support team member if the user asks for it. In this way, it is ensured that all the customer queries are answered in a minimal amount of time and the user experience is greatly enhanced.
-![](https://github.com/mivb-odoo/Chatbot-Module/blob/main/assets/12.Chat.gif)
+![](https://github.com/mihir254/Odoo-Custom-Chatbot/blob/main/assets/12.Chat.gif)
 ## 9. Conclusion
 The chatbot is perfectly capable of providing support to the users/customers. We can scale the chatbot to answer queries in any domain.
 This gives clients full power over what the chatbot is capable of achieving. The bot also allows an operator to jump in whenever the user/customer asks for it
